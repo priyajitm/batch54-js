@@ -232,6 +232,10 @@ const:
 3. it cannot be mutated
 4. it must be initialized during declaration
 
+Template String:
+var data = firstName.toLowerCase()
+console.log(`This is my name is lowercase ${data}`)
+
 Array:
 1. it is a collection of items
 2. it is mutable
@@ -252,6 +256,141 @@ something = stringSplit.join('')
 
 console.log(something)
 
+// Literal Syntax
+const someArray = [] 
+
+// Array Constructor
+const arrayOne = new Array() 
+
+const arrayTwo = new Array(10) // passing an initial size to the array
+
+const arrayThree = Array(10, 20 , 30, 40) // passing elements separating by comma
+
+// Concatenation
+const arrayOne = [5, 3, 1, 2, 4]
+const arrayTwo = [7, 9, 6, 10, 8]
+const arrayThree = arrayTwo.concat(arrayOne)
+const arrayNew = [5, 3, 1, 2, 4, 6]
+
+// Every - if all the elements passes the condition it will return true else false
+const arrayFour = [10, 20, 30, 40, 50]
+const isGreater = (val) => val > 45 // condition
+arrayFour.every(isGreater)
+// Some - if atleast one elements in array satisfies the condition, it will return true
+arrayFour.some(isGreater)
+// Length
+arrayFour.length
+// Finding Position of element in an array
+arrayOne.indexOf(1)
+// add value to the last index of an array
+arrayOne.push(10)
+// removing value from the last index of an array
+arrayOne.pop()
+// Adding value to the first index of an array
+arrayOne.unshift(10)
+// removing value from the first index of an array
+arrayOne.shift()
+// Sort an array
+arrayOne.sort()
+// Reverse an array
+arrayOne.reverse()
+// make an array a string
+arrayOne.toString()
+// if an element exists inside an array
+arrayOne.includes(5)
+
+// Slice
+// this will cut the array in two halves. 
+// It will start from beginning of the passed first index and will end before the passed second index
+// It will not mutate the original array
+ //arrayNew.slice(startIndex, endIndex) 
+
+// Splice
+// this will cut the array in two halves. 
+// It will start from beginning of the passed first index and will end at the passsed number of index
+// It will mutate the original array and return the new array
+arrayNew.splice(3, 3)
+
 */
+
+// Loops
+
+/* 
+1. For Loop
+2. While Loop
+3. Do While Loop
+4. Fo In Loop
+5. For Of Loop
+
+// While Loop - checks if condition is true then executes the blocked scoped code
+
+while (condition) {
+    // logic
+}
+
+let val = 1;
+while (val < 5) {
+    console.log(val)
+    val++
+    console.log('new value', val)
+}
+
+// Do While Loop - it will run the code in blocked scope at least once before checking the condition.
+
+do {
+    // logic
+} while (condition)
+
+let val = 1
+
+do {
+    val++
+    console.log(val)
+} while(val < 0)
+
+For Loop - it will the code inside the block a specific number of times until the condition is true
+for (initializing a variable; adding a condition; incrementing the variable) {
+    logic
+}
+
+for (let i = 0; i < 5; i++) {
+    console.log(i)
+}
+
+// For Of Loop
+const newArray = [1,2,3,4,5]
+
+for (let val of newArray) {
+    if (val > 3) {
+        console.log(val)
+    }
+}
+
+// Array map
+const newArray = [1,2,3,4,5]
+const anotherArray = []
+
+// map
+
+newArray.map(val => {
+    if (val > 3) {
+        anotherArray.push(val)
+    }
+})
+
+// Filter
+const newArray = [1,2,3,4,5]
+const anotherArray = newArray.filter(val => val < 3)
+
+*/
+
+
+
+
+
+
+
+
+
 
 
