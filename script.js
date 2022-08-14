@@ -366,6 +366,19 @@ for (let val of newArray) {
     }
 }
 
+const newObj = {
+    'name': 'priyajit', 
+    'age': '38', 
+    'job': 'developer'
+}
+
+const hobbies = ['coding', 'writing', 'eating']
+
+// For In Loop
+for (let property in newObj) {
+    console.log(`${property} : ${newObj[property]}`)
+}
+
 // Array map
 const newArray = [1,2,3,4,5]
 const anotherArray = []

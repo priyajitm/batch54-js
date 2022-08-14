@@ -112,4 +112,15 @@ function incrementVal(num) {
 
 */
 
+// Importing named function
+import { multiPly, multiPly2 } from './utils.js'
 
+// importing default exported function
+import utilsFunction from './utils.js'
+
+
+const res = utilsFunction.addTwoNumbers(2, 3)
+const res1 = utilsFunction.addThreeNumbers(3, 4, 5)
+const result = multiPly(4, 4)
+const result1 = multiPly2(4, 4, 4)
+console.log(result, result1)
