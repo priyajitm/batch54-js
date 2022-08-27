@@ -40,8 +40,15 @@ var sessionStorage = {
 
 // Cookie Storage
 var cookieStorage = {
-    set: function(key, value) {
-        document.cookie = key + "=" + value;
+    set: function(key, value, expiry) {
+        if (expiry) {
+            const date = new Date();
+            date.setTime(date.getTime() + (expiry * 24 * 60 * 60 * 1000));
+            const expires  = ';expires=' + date.toUTCString();
+            document.cookie = key + "=" + value + expires + ";path=/";
+        } else {
+            document.cookie = key + "=" + value;
+        }
     }
     , get: function(key) {
         var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
@@ -63,3 +70,11 @@ var cookieStorage = {
         return document.cookie;
     }
 };
+
+// cookieStorage.set('name', 'John');
+// console.log(cookieStorage.get('name'));
+cookieStorage.set('name', 'priyajit', 30);
+cookieStorage.set('surname', 'mukherjee', 7);
+cookieStorage.set('address', 'some address');
+cookieStorage.remove('name')
+cookieStorage.clear();
